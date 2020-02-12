@@ -3,5 +3,5 @@ services:
    bs4container001:
       image: bs4container:latest
       volumes:
-         - /mnt:/vol1
+         - /mnt:./vol1
       tty: true
