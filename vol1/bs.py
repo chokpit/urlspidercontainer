@@ -6,9 +6,8 @@ from importlib import reload
 print(sys.getdefaultencoding())
 #sys.setdefaultencoding("utf-8")
 
-print(sys.argv[0:])
+print(sys.argv[1])
 sauce = urllib.request.urlopen(sys.argv[1]).read()
-
 soup = bs.BeautifulSoup(sauce,'lxml')
 
 print(soup)
