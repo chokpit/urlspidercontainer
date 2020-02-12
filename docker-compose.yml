@@ -3,5 +3,5 @@ services:
    bs4container001:
       image: bs4container:latest
       volumes:
-         - /mnt:./vol1
+         - /home/fedora-user001/docker/bs4container/vol1:/mnt
       tty: true
