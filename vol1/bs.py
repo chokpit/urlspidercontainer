@@ -7,4 +7,4 @@ source = urllib.request.urlopen(sys.argv[1]).read()
 
 soup = bs.BeautifulSoup(source,'lxml')
 
-print(soup)
+print(source)
