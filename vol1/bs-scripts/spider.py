@@ -15,13 +15,12 @@ import sys
 
 
 ##############
-
-fileRead = open ('/mnt/bs-scripts/temp/temp_urls.txt','r')
-
-    for i
-    source = urllib.request.urlopen(sys.argv[1]).read()
+fr = open('/mnt/bs-scripts/temp/temp_urls.txt')
+fh = open('/mnt/bs-scripts/temp/temp_urls.txt','a+')
+for line in fr:
+#fh.close()
+    source = urllib.request.urlopen(line).read()
     soup = bs.BeautifulSoup(source,'lxml')
-
     for url in soup.find_all('a'):
-        f.write("\n {}".format(url.get('href')))
-    f.close()
+    fh.write("\n {}".format(url.get('href')))
+    # f.close()
