@@ -9,13 +9,13 @@ rel_path = "temp/temp_urls.txt"
 abs_file_path = os.path.join(script_dir, rel_path)
 
 print(abs_file_path)
-
+fh = open(abs_file_path, 'a+')
 with open(abs_file_path) as fr:
     for line in fr:
         print(line)
-        with open(abs_file_path, 'a+') as fh:
-            source = urllib.request.urlopen(line).read()
-            soup = bs.BeautifulSoup(source,'lxml')
-            for url in soup.find_all('a'):
-                fh.write("\n {}".format(url.get('href')))
-                fh.close()
+        source = urllib.request.urlopen(line).read()
+        soup = bs.BeautifulSoup(source,'lxml')
+        for url in soup.find_all('a'):
+            fh.write("\n {}".format(url.get('href')))
+fr.close()
+fh.close()
