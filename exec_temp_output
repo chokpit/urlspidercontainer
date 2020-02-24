@@ -1,2 +1,2 @@
 CONTAINER ID        IMAGE                 COMMAND               CREATED             STATUS              PORTS               NAMES
-9e018c235469        bs4container:latest   "./start_script.sh"   35 seconds ago      Up 34 seconds                           bs4container_bs4container001_1
+2c173c1d6ed8        bs4container:latest   "./start_script.sh"   19 seconds ago      Up 18 seconds                           bs4container_bs4container001_1
