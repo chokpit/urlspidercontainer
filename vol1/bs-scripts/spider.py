@@ -14,7 +14,7 @@ print(abs_file_path)
 with open(abs_file_path) as fr:
     for line in fr:
         print(line)
-        with open(abs_file_path, 'a+') as fh
+        with open(abs_file_path, 'a+') as fh:
             source = urllib.request.urlopen(line).read()
             soup = bs.BeautifulSoup(source,'lxml')
             for url in soup.find_all('a'):
