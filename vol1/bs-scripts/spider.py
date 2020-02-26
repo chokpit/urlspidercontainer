@@ -13,10 +13,11 @@ fh = open(abs_file_path, 'a+')
 with open(abs_file_path) as fr:
     for line in fr: #like while not EOF
         print(line)
-        if ((line.startswith('https') == False) and (line.startswith('http') == False)): #happens everytime because of the space " "
-            primary_url = line[:line.index('/')]
-            fixed_line = str(primary_url + line)
-            line = fixed_line
+        if ((line.startswith('https') == False) and (line.startswith('http') == False)):
+            # primary_url = line[:line.index('/')] # not good here need to take the first https://www.google.com
+            # fixed_line = str(primary_url + line) # not good
+            # line = fixed_line # not good
+            continue
 
         source = urllib.request.urlopen(line).read()
         soup = bs.BeautifulSoup(source,'lxml')
