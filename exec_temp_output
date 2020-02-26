@@ -1,0 +1,2 @@
+CONTAINER ID        IMAGE                 COMMAND               CREATED              STATUS              PORTS               NAMES
+99429df1f396        bs4container:latest   "./start_script.sh"   About a minute ago   Up About a minute                       urlspidercontainer_bs4container001_1
